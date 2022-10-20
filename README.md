@@ -14,7 +14,7 @@ prepare a setting.json (app → profile → settings → tap app version 10 time
 
 write and save as devices.js
 ```JavaScript
-import { SwitchBotAPI } from "https://code4fukui.github.io/SwitchBotAPI.js";
+import { SwitchBotAPI } from "https://code4fukui.github.io/SwitchBotAPI-deno/SwitchBotAPI.js";
 
 const setting = JSON.parse(await Deno.readTextFile("setting.json"));
 const api = new SwitchBotAPI(setting);
