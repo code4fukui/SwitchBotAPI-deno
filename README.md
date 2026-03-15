@@ -1,6 +1,8 @@
 # SwitchBotAPI-deno
 
-[SwitchBotAPI](https://github.com/OpenWonderLabs/SwitchBotAPI) for Deno
+> 日本語のREADMEはこちらです: [README.ja.md](README.ja.md)
+
+A library for interacting with SwitchBot devices using the SwitchBotAPI, implemented in Deno for use in Deno projects.
 
 ## Features
 - Control SwitchBot devices using the SwitchBotAPI

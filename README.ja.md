@@ -1,20 +1,14 @@
 # SwitchBotAPI-deno
 
-[SwitchBotAPI](https://github.com/OpenWonderLabs/SwitchBotAPI)をDenoで実装したライブラリです。
-
-## 機能
-
-- SwitchBotデバイスの操作
-- デバイスの一覧取得
-- デバイスの電源オン/オフ
+[SwitchBotAPI](https://github.com/OpenWonderLabs/SwitchBotAPI)をDenoで実装したライブラリです。SwitchBotデバイスの操作、デバイスの一覧取得、電源のオン/オフができます。
 
 ## 必要環境
-
 - Deno
 
 ## 使い方
 
-`setting.json`を準備します。
+1. `setting.json`ファイルを作成し、SwitchBotのAPI `token`と`secret`を設定します。
+
 ```json
 {
   "token": "xxx...",
@@ -22,7 +16,8 @@
 }
 ```
 
-`devices.js`を作成します。
+2. デバイスの一覧を取得するには`devices.js`を実行します。
+
 ```javascript
 import { SwitchBotAPI } from "https://code4fukui.github.io/SwitchBotAPI-deno/SwitchBotAPI.js";
 
@@ -31,11 +26,11 @@ const api = new SwitchBotAPI(setting);
 console.log(await api.getDevices());
 ```
 
-deviceIdを取得したら、`plug.js`で操作できます。
+3. デバイスの電源をオン/オフするには`plug.js`を実行します。
+
 ```
 deno run -A plug.js [deviceId] [on/off]
 ```
 
 ## ライセンス
-
 MIT License
