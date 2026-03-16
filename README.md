@@ -47,4 +47,4 @@ await api.turnOn(deviceId);
 ```
 
 ## License
-MIT License
+MIT License — see [LICENSE](LICENSE).
