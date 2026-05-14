@@ -1,19 +1,31 @@
 # SwitchBotAPI-deno
 
-[SwitchBotAPI](https://github.com/OpenWonderLabs/SwitchBotAPI) for Deno
+> 日本語のREADMEはこちらです: [README.ja.md](README.ja.md)
+
+A library for interacting with SwitchBot devices using the SwitchBotAPI, implemented in Deno for use in Deno projects.
+
+## Features
+- Control SwitchBot devices using the SwitchBotAPI
+- Implemented in Deno for use in Deno projects
+
+## Requirements
+- Deno runtime
+- SwitchBot account with API token and secret
 
 ## Usage
 
-prepare a setting.json (app → profile → settings → tap app version 10 times! to get token & secret)
+1. Create a `setting.json` file with your SwitchBot API token and secret:
+
 ```json
 {
   "token": "xxx...",
-  "secret": "xxxxxx...",
+  "secret": "xxxxxx..."
 }
 ```
 
-write and save as devices.js
-```JavaScript
+2. Write a script to use the SwitchBotAPI:
+
+```javascript
 import { SwitchBotAPI } from "https://code4fukui.github.io/SwitchBotAPI-deno/SwitchBotAPI.js";
 
 const setting = JSON.parse(await Deno.readTextFile("setting.json"));
@@ -21,13 +33,18 @@ const api = new SwitchBotAPI(setting);
 console.log(await api.getDevices());
 ```
 
-run to get deviceId
+3. Run the script to get the list of your SwitchBot devices:
+
 ```bash
 deno run -A devices.js
 ```
 
-to turn on
-```JavaScript
+4. To turn a device on or off, use the `turnOn()` or `turnOff()` methods:
+
+```javascript
 const api = new SwitchBotAPI(setting);
 await api.turnOn(deviceId);
 ```
+
+## License
+MIT License — see [LICENSE](LICENSE).
